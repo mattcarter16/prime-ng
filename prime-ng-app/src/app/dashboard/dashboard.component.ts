@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { UIChart } from "primeng/primeng";
 import {Observable} from 'rxjs/Observable';
-import '../rxjs-operators';
+import 'rxjs/add/observable/of';
+import 'rxjs/add/operator/delay';
 
 
 
@@ -119,7 +120,7 @@ export class DashboardComponent implements AfterViewInit {
 
 
   ngAfterViewInit() {
-    Observable.interval(3000).timeInterval().subscribe(() => {
+    Observable.of([1,2,3]).delay(3000).subscribe(() => {
 
       var hoursByTeam = this.hoursByTeamChartDataMixed.datasets;
       var randomised = hoursByTeam.map((dataset) => {
