@@ -14,7 +14,6 @@ export enum PageNames {
   PeoplePage
 }
 
-
 @Component({
   selector: 'at-timesheet',
   templateUrl: './timesheet.component.html',
