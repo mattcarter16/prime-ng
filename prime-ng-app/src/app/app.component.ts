@@ -2,8 +2,9 @@ import {Component, OnInit, ViewChild, ElementRef, AfterViewInit} from '@angular/
 import {MenuItem} from "primeng/primeng";
 import {Menu} from "primeng/components/menu/menu";
 import {ActivatedRoute, Router} from "@angular/router";
+import * as jQuery from 'jquery';
 
-declare var jQuery :any;
+
 
 @Component({
   selector: 'app-root',

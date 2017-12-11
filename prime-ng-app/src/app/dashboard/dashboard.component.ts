@@ -120,7 +120,7 @@ export class DashboardComponent implements AfterViewInit {
 
 
   ngAfterViewInit() {
-    Observable.of([1,2,3]).delay(3000).subscribe(() => {
+    Observable.interval(3000).timeInterval().subscribe(() => {
 
       var hoursByTeam = this.hoursByTeamChartDataMixed.datasets;
       var randomised = hoursByTeam.map((dataset) => {
